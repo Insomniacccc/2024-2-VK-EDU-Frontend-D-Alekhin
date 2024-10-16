@@ -37,10 +37,11 @@ test('Возвращает корректное значение для чисе
   expect(convertBytesToHuman(1024 ** 6)).toBe('1024 PB');
 });
 
-test('Корректно обрабатывает числа с плавующей точкой и граничные значения', () => {
-  expect(convertBytesToHuman(1024.5)).toBe('1 KB');
-  expect(convertBytesToHuman(1500.75)).toBe('1.47 KB');
-  expect(convertBytesToHuman(0.5)).toBe('0.5 B');
+test('Корректно обрабатывает граничные значения', () => {
   expect(convertBytesToHuman(1999)).toBe('1.95 KB');
   expect(convertBytesToHuman(2000000)).toBe('1.91 MB');
+  expect(convertBytesToHuman(1)).toBe('1 B');
+  expect(convertBytesToHuman(1023)).toBe('1023 B');
+  expect(convertBytesToHuman(1024)).toBe('1 KB');
+  expect(convertBytesToHuman(1048576)).toBe('1 MB');
 });

@@ -31,7 +31,7 @@ export default function convertBytesToHuman(bytes) {
         index++;
     }
 
-    let value = bytes / Math.pow(1024, index);
+    const value = bytes / Math.pow(1024, index);
     
     let roundedValue = value.toFixed(2).replace(/\.?0+$/, '');
 

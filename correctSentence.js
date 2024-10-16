@@ -22,11 +22,7 @@ export default function correctSentence(text) {
     return '';
   }
 
-  let correctedText = text.charAt(0).toUpperCase() + text.slice(1);
+  const correctedText = `${text.charAt(0).toUpperCase()}${text.slice(1)}`;
 
-  if (!correctedText.endsWith('.')) {
-    correctedText += '.';
-  }
-
-  return correctedText;
+  return correctedText.endsWith('.') ? correctedText : `${correctedText}.`;
 }

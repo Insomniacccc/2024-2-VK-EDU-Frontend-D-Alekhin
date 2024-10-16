@@ -31,5 +31,5 @@ export default function nonUniqueElements(data) {
     frequency.set(num, (frequency.get(num) || 0) + 1);
   }
 
-  return data.filter(num => frequency.get(num) > 1);
+  return data.filter((num) => frequency.get(num) > 1);
 }
