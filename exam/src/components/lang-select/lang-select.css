@@ -1,6 +1,10 @@
 .lang-select {
     display: flex;
-    gap: 8px
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 8px;
+    width: 50%;
+    margin: 0 8px;
 }
 
 .lang-select__lang {

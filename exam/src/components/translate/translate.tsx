@@ -26,8 +26,8 @@ function Translate(props: TranslateProps) {
                         <input
                             className="translate__text-input"
                             onChange={(e) => {
-                                setWord(e.value);
-                                setText(e.value);
+                                setWord(e.target.value);
+                                setText(e.target.value);
                             }}
                             value={word}
                         />

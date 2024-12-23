@@ -42,10 +42,13 @@ const translationSlice = createSlice({
         addTranslation: (state, action: PayloadAction<Translation>) => {
             state.translatedWords.push(action.payload);
         },
+        clearTranslations: (state) => {
+            state.translatedWords = [];
+        },
     },
 });
 
-export const { addTranslation } = translationSlice.actions;
+export const { addTranslation, clearTranslations } = translationSlice.actions;
 
 const store = configureStore({
     reducer: {

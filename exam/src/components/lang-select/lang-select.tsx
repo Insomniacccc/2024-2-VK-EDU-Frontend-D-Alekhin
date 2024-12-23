@@ -5,8 +5,7 @@ import './lang-select.css';
 
 function LangSelect({ hasAutodetect, setLang }: {hasAutodetect?: boolean, setLang: (key: string) => void }): JSX.Element {
     const langsKeys = hasAutodetect ? Object.keys(langs) : Object.keys(langs).slice(1);
-    const langsKeysToShow = langsKeys.slice(0, 3);
-    const [chosenLang, setChosenLang] = useState(langsKeysToShow[0]);
+    const [chosenLang, setChosenLang] = useState(langsKeys[0]);
 
     useEffect(() => {
         setLang(chosenLang);
@@ -14,7 +13,7 @@ function LangSelect({ hasAutodetect, setLang }: {hasAutodetect?: boolean, setLan
 
     return (
         <div className="lang-select">
-            {langsKeysToShow.map((key: string) => (
+            {langsKeys.map((key: string) => (
                 <button
                     key={key}
                     className={chosenLang === key ? 'lang-select__lang lang-select__lang_chosen' : 'lang-select__lang'}
