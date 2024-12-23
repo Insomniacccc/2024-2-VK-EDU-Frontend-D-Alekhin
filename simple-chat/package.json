@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "start": "simple-chat/node_modules/.bin/webpack-dev-server --mode=development --hot",
-    "build": "simple-chat/node_modules/.bin/webpack --mode=development"
+    "start": "node_modules/.bin/webpack-dev-server --mode=development --hot",
+    "build": "node_modules/.bin/webpack --mode=development"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",

@@ -4,7 +4,6 @@ const path = require('path');
 
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
-const webpack = require('webpack');
 
 const SRC_PATH = path.resolve(__dirname, 'src');
 const BUILD_PATH = path.resolve(__dirname, 'build');
@@ -12,11 +11,12 @@ const BUILD_PATH = path.resolve(__dirname, 'build');
 module.exports = {
     context: SRC_PATH,
     entry: {
-        index: './index.js',
+        index: './scripts/index.js',
+        chat: './scripts/chat.js'
     },
     output: {
         path: BUILD_PATH,
-        filename: 'bundle.js'
+        filename: '[name].bundle.js'
     },
     module: {
         strictExportPresence: true,
@@ -61,9 +61,19 @@ module.exports = {
             filename: 'style.css',
         }),
         new HTMLWebpackPlugin({
+            filename: 'index.html',
+            template: './index.html',
+            chunks: ['index'],
+        }),
+        new HTMLWebpackPlugin({
             filename: 'chat.html',
-            template: './chat.html'
-        })
-    ]
+            template: './chat.html',
+            chunks: ['chat'],
+        }),
+    ],
+    devServer: {
+        contentBase: BUILD_PATH,
+        compress: true,
+        port: 8080,
+    }
 };
-
