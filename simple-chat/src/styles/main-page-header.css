@@ -10,9 +10,19 @@
 }
 
 .main-page__button {
+    display: flex;
+    justify-content: center;
+    padding: 4px;
     background-color: transparent;
     border: none;
     color: rgb(255 255 255);
+    cursor: pointer;
+    transition: background-color 0.6s;
+    border-radius: 50%;
+}
+
+.main-page__button:hover {
+    background-color: rgb(0 0 0 / 0.2);
 }
 
 .main-page__title {

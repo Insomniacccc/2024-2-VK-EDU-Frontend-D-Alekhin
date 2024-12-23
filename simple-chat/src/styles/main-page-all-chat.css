@@ -1,4 +1,4 @@
-.main-page__chats-list {
+.main-page__all-chat {
     height: 100%;
     padding: 12px;
     display: flex;
@@ -8,14 +8,24 @@
 }
 
 .main-page__chat {
+    padding: 12px;
     display: grid;
     grid-template-columns: 64px 2fr 1fr;
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
-        "avatar chat-name time"
-        "avatar last-message is-readed";
+    "avatar chat-name time"
+    "avatar last-message is-readed";
     align-items: center;
     cursor: pointer;
+    transition: background-color 0.6s;
+}
+
+.main-page__chat:hover {
+    background-color: rgba(255, 213, 79, 0.5);
+}
+
+.main-page__chat:active {
+    background-color: #ffd54f; /* Можно и rgba(255, 213, 79, 1) */
 }
 
 .main-page__avatar {
@@ -33,14 +43,14 @@
 .main-page__last-message {
     grid-area: last-message;
     font-size: 12px;
-    color: rgb(133 133 133);
+    color: #858585;
 }
 
 .main-page__last-message-time {
     display: flex;
     justify-content: flex-end;
     grid-area: time;
-    color: rgb(133 133 133);
+    color: #858585;
     font-size: 12px;
 }
 
@@ -48,7 +58,7 @@
     display: flex;
     justify-content: flex-end;
     grid-area: is-readed;
-    color: rgb(142 36 170);
+    color: #8e24aa;
 }
 
 .check-icon.material-icons {
