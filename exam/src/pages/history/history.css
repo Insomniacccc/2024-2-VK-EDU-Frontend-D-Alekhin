@@ -1,0 +1,18 @@
+.history {
+    display: flex;
+    flex-direction: column;
+}
+
+.history__content {
+    border: 1px solid rgba(5, 5, 5, 0.2);
+    width: 50%;
+    margin: 20px auto 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.history__title {
+    margin: 16px 8px;
+    color: rgba(5, 5, 5, 0.7);
+}
+
