@@ -1,0 +1,47 @@
+.form {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0;
+    background-color: #fafafa;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #fff;
+}
+
+.message-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.attach-button {
+    background: none;
+    border: none;
+    color: #adadad;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.new-message {
+    position: relative;
+    bottom: -100px;
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        bottom: -100px;
+    }
+    to {
+        bottom: 0;
+    }
+}
