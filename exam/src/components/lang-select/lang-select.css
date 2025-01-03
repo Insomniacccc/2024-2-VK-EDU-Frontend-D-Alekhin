@@ -1,0 +1,26 @@
+.lang-select {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 8px;
+    width: 50%;
+    margin: 0 8px;
+}
+
+.lang-select__lang {
+    height: 48px;
+    line-height: 48px;
+    background: unset;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lang-select__lang:hover {
+    cursor: pointer;
+}
+
+.lang-select__lang_chosen {
+    color: rgba(100, 100, 255, 0.7);
+    border-bottom: 1px solid rgba(100, 100, 255, 0.7);
+}

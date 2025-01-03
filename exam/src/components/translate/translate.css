@@ -1,0 +1,29 @@
+.translate {
+    margin: 20px;
+    border: 1px solid rgba(5, 5, 5, 0.2);
+}
+
+.translate__header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(5, 5, 5, 0.2);
+}
+
+.translate__body {
+    width: 100%;
+    display: flex;
+}
+
+.translate__text-input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-right: 1px solid rgba(5, 5, 5, 0.2);
+    margin: 0;
+    padding: 0;
+}
+
+.translate__input-container {
+    width: 50%;
+    height: 300px;
+}
